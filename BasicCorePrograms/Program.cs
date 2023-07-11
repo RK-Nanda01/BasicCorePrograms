@@ -18,6 +18,7 @@ class Program
             Console.WriteLine("7. Swap Two Numbers");
             Console.WriteLine("8. Check If Number is Even Or Odd");
             Console.WriteLine("9. Check If Vowel or Not");
+            Console.WriteLine("10.Find Largest Of 3 Numbers");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -216,6 +217,23 @@ class Program
                             Console.WriteLine($"{a} Is Consonant");
                         }
 
+                        break;
+
+                    }
+                case 10:
+                    {
+                        int x, y, z;
+                        int res;
+                        Console.WriteLine("Finding Largest of 3");
+                        Console.WriteLine("Enter value of x");
+                        x = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter value of y");
+                        y = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter value of z");
+                        z = Convert.ToInt32(Console.ReadLine());
+                        Largest l = new Largest();
+                        res = l.LargestOfThree(x,y,z);
+                        Console.WriteLine($"The largest of {x} , {y} , {z} is {res}");
                         break;
 
                     }
