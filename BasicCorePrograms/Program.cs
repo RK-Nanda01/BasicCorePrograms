@@ -14,6 +14,7 @@ class Program
             Console.WriteLine("3. Print Powers of 2");
             Console.WriteLine("4. Print Nth Harmonic");
             Console.WriteLine("5. Print Factors of a Number");
+            Console.WriteLine("6. Print Quotient and Remainder");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -106,6 +107,39 @@ class Program
                             Factors f = new Factors();
                             f.PrintFactors(n);
                             Console.WriteLine("");
+                        }
+
+                        break;
+
+                    }
+                case 6:
+                    {
+                        int n;
+                        int div;
+                        int[] res;
+                        Console.WriteLine("Finding Quotient and Remainder");
+                        Console.WriteLine("Enter value of n");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter value of div");
+                        div = Convert.ToInt32(Console.ReadLine());
+                        if (div == 0)
+                        {
+                            Console.WriteLine("div should not be 0");
+                        }
+                        else
+                        {
+                            QuotientRem q = new QuotientRem();
+                            res = q.GetQuoAndRem(n,div);
+                            Console.WriteLine($"Quotient is {res[0]}");
+                            if (res[1]<0)
+                            {
+                                Console.WriteLine($"Remainder is {div - res[1]}");
+
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Remainder is {res[1]}");
+                            }
                         }
 
                         break;
