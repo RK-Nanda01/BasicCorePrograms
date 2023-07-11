@@ -17,6 +17,7 @@ class Program
             Console.WriteLine("6. Print Quotient and Remainder");
             Console.WriteLine("7. Swap Two Numbers");
             Console.WriteLine("8. Check If Number is Even Or Odd");
+            Console.WriteLine("9. Check If Vowel or Not");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -194,6 +195,27 @@ class Program
                             Console.WriteLine($"{num1} Is Odd");
                         }
   
+                        break;
+
+                    }
+                case 9:
+                    {
+                        string a;
+                        bool res;
+                        Console.WriteLine("Checking If Char is Vowel or Consonant");
+                        Console.WriteLine("Enter value of a");
+                        a = Console.ReadLine();
+                        VowelConsonant v = new VowelConsonant();
+                        res = v.IsVowel(a);
+                        if (res)
+                        {
+                            Console.WriteLine($"{a} Is Vowel");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{a} Is Consonant");
+                        }
+
                         break;
 
                     }
