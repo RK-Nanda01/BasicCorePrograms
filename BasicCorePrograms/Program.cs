@@ -12,6 +12,7 @@ class Program
             Console.WriteLine("1. FlipCoin");
             Console.WriteLine("2. LeapYear");
             Console.WriteLine("3. Print Powers of 2");
+            Console.WriteLine("4. Print Nth Harmonic");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -64,6 +65,28 @@ class Program
                             p.PrintPowersOfTwo(n);
                         }
                         
+                        break;
+
+                    }
+                case 4:
+                    {
+                        int n;
+                        double res;
+                        Console.WriteLine("Printing Nth Harmonic");
+                        Console.WriteLine("Enter value of n");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        if (n < 0)
+                        {
+                            Console.WriteLine("Enter positive n");
+                        }
+                        else
+                        {
+                            Harmonic h = new Harmonic();
+                            res= h.PrintHarmonic(n);
+                            Console.WriteLine($"Nth Harmonic in decimal is {1 / res}");
+                            Console.WriteLine($"Nth Harmonic in fraction is 1 / {res}");
+                        }
+
                         break;
 
                     }
