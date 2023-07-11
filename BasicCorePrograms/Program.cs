@@ -15,6 +15,7 @@ class Program
             Console.WriteLine("4. Print Nth Harmonic");
             Console.WriteLine("5. Print Factors of a Number");
             Console.WriteLine("6. Print Quotient and Remainder");
+            Console.WriteLine("7. Swap Two Numbers");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -141,6 +142,33 @@ class Program
                                 Console.WriteLine($"Remainder is {res[1]}");
                             }
                         }
+
+                        break;
+
+                    }
+                case 7:
+                    {
+                        int num1;
+                        int num2;
+                        
+                        Console.WriteLine("Swapping Two Numbers");
+                        Console.WriteLine("Enter value of num1");
+                        num1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter value of num2");
+                        num2 = Convert.ToInt32(Console.ReadLine());
+                       
+                        Console.WriteLine("Before Swapping:->");
+                        Console.WriteLine($"Num1:->{num1}");
+                        Console.WriteLine($"Num2:->{num2}");
+                       
+                        Swap s = new Swap();
+                        s.SwapNumbers(ref num1, ref num2);
+                        Console.WriteLine($"After Swapping:->");
+                        Console.WriteLine($"Num1:->{num1}");
+                        Console.WriteLine($"Num2:->{num2}");
+
+                       
+                    
 
                         break;
 
