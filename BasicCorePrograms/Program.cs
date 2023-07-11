@@ -16,6 +16,7 @@ class Program
             Console.WriteLine("5. Print Factors of a Number");
             Console.WriteLine("6. Print Quotient and Remainder");
             Console.WriteLine("7. Swap Two Numbers");
+            Console.WriteLine("8. Check If Number is Even Or Odd");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -170,6 +171,29 @@ class Program
                        
                     
 
+                        break;
+
+                    }
+                case 8:
+                    {
+                        int num1;
+                        bool res;
+                        Console.WriteLine("Checking If number is Even Or Odd");
+                        Console.WriteLine("Enter value of num1");
+                        num1 = Convert.ToInt32(Console.ReadLine());
+                       
+                       
+                        EvenOdd e = new EvenOdd();
+                        res = e.IfEven(num1);
+                       if(res)
+                        {
+                            Console.WriteLine($"{num1} Is Even");
+                        }
+                       else
+                        {
+                            Console.WriteLine($"{num1} Is Odd");
+                        }
+  
                         break;
 
                     }
