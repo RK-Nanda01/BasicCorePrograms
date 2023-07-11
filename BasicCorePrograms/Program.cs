@@ -8,8 +8,10 @@ class Program
         bool flag = true;
         while(flag)
         {
+            Console.WriteLine("MENU:->");
             Console.WriteLine("1. FlipCoin");
             Console.WriteLine("2. LeapYear");
+            Console.WriteLine("3. Print Powers of 2");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -43,6 +45,25 @@ class Program
                         {
                             Console.WriteLine($"{year} is Not a Leap Year");
                         }
+                        break;
+
+                    }
+                case 3:
+                    {
+                        int n;
+                        Console.WriteLine("Power of 2");
+                        Console.WriteLine("Enter value of n");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        if(n >= 31 || n<0 )
+                        {
+                            Console.WriteLine("Enter n between 0 and 31");
+                        }
+                        else
+                        {
+                            PowerOf2 p = new PowerOf2();
+                            p.PrintPowersOfTwo(n);
+                        }
+                        
                         break;
 
                     }
