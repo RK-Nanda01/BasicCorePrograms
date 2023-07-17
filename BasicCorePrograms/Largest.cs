@@ -5,7 +5,32 @@ namespace BasicCorePrograms
 	{
 		public int LargestOfThree(int x,int y,int z)
 		{
-			return Math.Max(Math.Max(x, y), z);
+			if(x >= y)
+			{
+				if (x >= z)
+				{
+					return x;
+				}
+				else 
+				{
+
+						return z;
+
+				}
+
+			}
+
+			else
+			{
+				if(y>=z)
+				{
+					return y;
+				}
+				else
+				{
+					return z;
+				}
+			}
 
 		}
 	}
