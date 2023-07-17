@@ -89,8 +89,7 @@ class Program
                         {
                             Harmonic h = new Harmonic();
                             res= h.PrintHarmonic(n);
-                            Console.WriteLine($"Nth Harmonic in decimal is {1 / res}");
-                            Console.WriteLine($"Nth Harmonic in fraction is 1 / {res}");
+                            Console.WriteLine($"Nth Harmonic in decimal is {res}");
                         }
 
                         break;
