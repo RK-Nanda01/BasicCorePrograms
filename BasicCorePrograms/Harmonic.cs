@@ -10,7 +10,6 @@ namespace BasicCorePrograms
 			{
 				res += 1 / i;
 			}
-			
 			return res;
 		}
 	}
