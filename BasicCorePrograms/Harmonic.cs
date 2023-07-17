@@ -3,10 +3,14 @@ namespace BasicCorePrograms
 {
 	public class Harmonic
 	{
-		public int PrintHarmonic(int n)
+		public double PrintHarmonic(int n)
 		{
-			int res;
-			res = (n * (n + 1)) / 2;
+			double res = 1;
+			for(double i = 2; i<=n; i++)
+			{
+				res += 1 / i;
+			}
+			
 			return res;
 		}
 	}
